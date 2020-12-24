@@ -3,6 +3,11 @@ sum_search <- 2020
 
 numbers <- read.csv("C:/Users/Owner/Personal/Coding/Misc/R packages/Christmas 2020 puzzles/Inputs/01_input.txt", header = FALSE)[[1]]
 
+## If we assume there is a single pair the answer is
+concatenated <- c(numbers, sum_search-numbers)
+concatenated[duplicated(concatenated)]
+
+## If we assume there may be multiple pairs...
 all_pairs <- find_all_pairs(numbers, sum_search)
 ## Bring corresponding pairs that sum to sum_search together in
 ## a nested list
