@@ -1,5 +1,5 @@
 day <- "06"
-dd <- glue::glue("C:/Users/Owner/Personal/Coding/Misc/R packages/Christmas 2020 puzzles/Inputs/{day}_input_test.txt")
+dd <- glue::glue("C:/Users/Owner/Personal/Coding/Misc/R packages/Christmas 2020 puzzles/Inputs/{day}_input.txt")
 
 ## Import input
 answers.everyone <- readr::read_file(dd)
