@@ -14,9 +14,7 @@ boarding_passes <- find_boarding_passes(boarding_codes)
 pass.id.max <- max(as.numeric(stringr::str_extract(boarding_passes, "(?<=ID )[0-9]*")))
 
 # Part 2 ------------------------------------------------------------------
-## Find taken seats
-rows.taken <- as.numeric(stringr::str_extract(boarding_passes, "(?<=row )[0-9]*"))
-cols.taken <- as.numeric(stringr::str_extract(boarding_passes, "(?<=column )[0-9]*"))
+## Find IDs
 ids <- as.numeric(stringr::str_extract(boarding_passes, "(?<=ID )[0-9]*"))
 ## Find missing seat
 ids.expected <- seq(min(ids), max(ids))
